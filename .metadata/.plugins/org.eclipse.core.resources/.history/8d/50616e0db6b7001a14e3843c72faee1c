@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/board-style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+			<div class="row">
+				<div class="col-md-10"><h1 class="modal-header">자유게시판</h1></div>
+				<div class="col-md-1 align-center board-title white">플</div>
+				<div class="col-md-1 align-center board-title white">홈</div>
+			</div>
+				
+			<div class="row">
+			<div class="container align-center">
+				<div class="table-responsive">
+				<table class="table">
+				<col width="10%">
+				<col width="25%">
+				<col width="35%">
+				<col width="30%">
+					<tr>
+						<th>번호</th>
+						<th>작성자</th>
+						<th>제목</th>
+						<th>작성일</th>
+					</tr>
+						{{#list}}
+					<tr>
+						<td>{{myno}}</td>
+						<td>{{myname}}</td>
+						<td><a href="/detail?myno={{myno}}">{{mytitle}}</a></td>
+						<td>{{mydate}}</td>
+					</tr>
+						{{/list}}
+				</table>
+				</div>
+			</div>
+			</div>
+				<div class="align-center border-dash-red">
+					<input type="button" value="insert" class="btn btn-primary" onclick="location.href='insertform'">
+					<input type="button" value="insert" class="btn btn-primary" onclick="location.href='insertform'">
+					<input type="button" value="insert" class="btn btn-primary" onclick="location.href='insertform'">
+				</div>
+	</div>	
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+  <script type="text/javascript">
+
+  </script>	
+</body>
+</html>

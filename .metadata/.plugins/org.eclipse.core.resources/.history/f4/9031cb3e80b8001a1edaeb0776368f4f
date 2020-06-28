@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/board-style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>PartsOn</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row modal-header board-title">
+			<div class="col-md-10 align-left white"><h1 id="freeboard-logo">자유게시판</h1></div>
+			<div class="col-md-1 align-center board-title white"><img id="cross-white" src="images/cross-white.png"></div>
+			<div class="col-md-1 align-center board-title white"><img id="home-white" src="images/home-white.png"></div>
+		</div>
+				
+		<div class="row">
+		<div class="container align-center">
+			<div class="table-responsive">
+	<form action="/insertres" method="post">
+		<table>
+			<tr>
+				<th>작성자</th>
+				<td><input type="text" name="myname"></td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td><input type="text" name="mytitle"></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td>
+					<textarea rows="10" cols="60" name="mycontent"></textarea>
+				</td>
+			</tr>
+			 <tr>
+			 	<td>
+			 		<input type="submit" value="작성">
+			 	</td>
+			 </tr>
+		</table>
+	</form>
+		</div>
+		</div>
+	</div>	
+</body>
+</html>

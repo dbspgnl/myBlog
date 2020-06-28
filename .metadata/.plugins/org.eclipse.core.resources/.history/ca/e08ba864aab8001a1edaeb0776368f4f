@@ -1,0 +1,5 @@
+package com.boot.myblog2.board;
+
+public class BoardBiz {
+
+}

@@ -1,0 +1,22 @@
+package com.boot.myblog2.board;
+
+import java.text.Collator;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import lombok.RequiredArgsConstructor;
+import java.util.stream.Collectors;
+
+@RequiredArgsConstructor
+@Service
+public class BoardBiz {
+	private final BoardDao dao;
+
+	@Transactional
+	public List<BoardDto> findAllDesc(){
+		return dao.findAllDesc().stream().map(BoardDto::new)
+	}
+	
+}
