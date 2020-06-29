@@ -31,6 +31,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions> <!-- Exclude the Tomcat dependency --> 
+				<exclusion> 
+					<groupId>org.springframework.boot</groupId> 
+					<artifactId>spring-boot-starter-tomcat</artifactId> 
+				</exclusion> 
+			</exclusions>
+
 		</dependency>
 
 		<dependency>
@@ -63,11 +70,34 @@
 
 	<build>
 		<plugins>
+		
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+      				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+    		
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <configuration>
+		          <skipTests>true</skipTests>
+		        </configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.boot.myblog2.Myblog2Application</mainClass>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			
+		</plugins>	
 	</build>
 
 </project>
