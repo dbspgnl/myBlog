@@ -1607,3 +1607,318 @@
 2020-06-28 23:57:20,293 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
 2020-06-28 23:58:38,747 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
 2020-06-28 23:58:38,837 [Worker-35: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-28 23:58:38,838 [Worker-35: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:12:16,354 [Worker-40: Building workspace] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:561) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:570) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:563) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:519) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:365) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:155) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:90) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:87) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:201) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.400.v20190516-1504.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.400.v20190516-1504.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.400.v20190506-1457.jar:na]
+Caused by: org.apache.maven.model.io.ModelParseException: Duplicated tag: 'configuration' (position: START_TAG seen ...</configuration>\n\t\t        <configuration>... @79:26) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:114) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:82) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:559) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated tag: 'configuration' (position: START_TAG seen ...</configuration>\n\t\t        <configuration>... @79:26) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkFieldWithDuplicate(MavenXpp3Reader.java:140) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parsePlugin(MavenXpp3Reader.java:2775) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseBuild(MavenXpp3Reader.java:988) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2281) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:109) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	... 26 common frames omitted
+2020-06-29 00:12:17,758 [Worker-40: Building workspace] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:561) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:570) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:563) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:519) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:365) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:155) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:90) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:87) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:201) [org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.400.v20190516-1504.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.400.v20190516-1504.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) [org.eclipse.core.resources_3.13.400.v20190505-1655.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.400.v20190506-1457.jar:na]
+Caused by: org.apache.maven.model.io.ModelParseException: Duplicated tag: 'configuration' (position: START_TAG seen ...</configuration>\n\t\t        <configuration>... @79:26) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:114) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:82) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:559) ~[org.eclipse.m2e.core_1.12.0.20190529-1916.jar:na]
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated tag: 'configuration' (position: START_TAG seen ...</configuration>\n\t\t        <configuration>... @79:26) 
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.checkFieldWithDuplicate(MavenXpp3Reader.java:140) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parsePlugin(MavenXpp3Reader.java:2775) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseBuild(MavenXpp3Reader.java:988) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2281) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595) ~[maven-model-3.6.1.jar:3.6.1]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:109) ~[maven-model-builder-3.6.1.jar:3.6.1]
+	... 26 common frames omitted
+2020-06-29 00:12:23,948 [Worker-28: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.jar
+2020-06-29 00:12:24,235 [Worker-28: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:12:25,269 [Worker-28: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.pom
+2020-06-29 00:12:25,275 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:3.1.0 is missing, no dependency information available
+2020-06-29 00:12:25,641 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:25,645 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:12:25,645 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:12:25,648 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:25,648 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:12:25,651 [Worker-28: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:3.1.0 is missing, no dependency information available
+2020-06-29 00:12:28,211 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:28,218 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:12:28,237 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:12:28,322 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:28,322 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:12:28,326 [Worker-41: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:3.1.0 is missing, no dependency information available
+2020-06-29 00:12:35,646 [Worker-40: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:12:36,534 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:36,541 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:12:36,562 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:12:36,568 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:36,568 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:12:56,830 [Worker-41: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:12:57,367 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:57,370 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:12:57,371 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:12:57,373 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:12:57,373 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:13:16,961 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-06-29 00:13:29,746 [Worker-43: Launching myblog2 (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:13:29,746 [Worker-43: Launching myblog2 (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:14:50,414 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-06-29 00:14:58,216 [Worker-28: Launching myblog2 (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:14:58,216 [Worker-28: Launching myblog2 (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B package
+2020-06-29 00:16:05,510 [Worker-42: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:16:06,052 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:16:06,056 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:16:06,057 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:16:06,059 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:16:06,059 [Worker-42: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:23:30,952 [Worker-44: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:23:31,861 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:23:31,868 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:23:31,888 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:23:31,895 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:23:31,895 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:23:46,542 [Worker-47: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:23:47,462 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:23:47,469 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:23:47,491 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:23:47,498 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:23:47,520 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:24:14,695 [Worker-48: Launching Executing clean in C__workspace_myBlog_myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:24:14,696 [Worker-48: Launching Executing clean in C__workspace_myBlog_myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B clean
+2020-06-29 00:24:18,077 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:24:18,084 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:24:18,103 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:24:18,170 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:24:18,171 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:24:25,466 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-06-29 00:25:38,033 [Worker-49: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:25:38,033 [Worker-49: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -Ppom.xml -B package
+2020-06-29 00:25:55,946 [Worker-46: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:25:55,946 [Worker-46: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:27:40,276 [Worker-48: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:27:40,844 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:27:40,847 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:27:40,848 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:27:40,850 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:27:40,850 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:27:46,024 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 00:27:46,109 [Worker-48: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:27:46,109 [Worker-48: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:28:16,252 [Worker-51: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:28:16,878 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:28:16,882 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:28:16,883 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:28:16,885 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:28:16,885 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:28:25,011 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 00:28:25,096 [Worker-51: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:28:25,096 [Worker-51: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:28:51,286 [Worker-44: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:28:54,523 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:28:54,527 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:28:54,527 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:28:54,529 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:28:54,529 [Worker-44: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:28:56,335 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-06-29 00:29:12,451 [Worker-48: Launching myblog2 (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:29:12,451 [Worker-48: Launching myblog2 (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:30:00,544 [Worker-50: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:30:00,544 [Worker-50: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:32:27,846 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.0.2/maven-jar-plugin-3.0.2.jar
+2020-06-29 00:32:28,186 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.0.2/maven-jar-plugin-3.0.2.jar
+2020-06-29 00:32:28,511 [Worker-51: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:32:29,132 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.0.2/maven-jar-plugin-3.0.2.pom
+2020-06-29 00:32:29,325 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.0.2/maven-jar-plugin-3.0.2.pom
+2020-06-29 00:32:29,515 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:32:29,519 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:32:29,520 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:32:29,522 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:32:29,522 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:32:30,419 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.0.1/maven-shared-utils-3.0.1.jar
+2020-06-29 00:32:31,060 [Worker-51: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.0.1/maven-shared-utils-3.0.1.jar
+2020-06-29 00:32:55,495 [Worker-51: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:32:56,479 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:32:56,487 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:32:56,505 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:32:56,511 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:32:56,512 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:33:26,167 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:33:26,168 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:33:26,185 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:33:26,269 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:33:26,269 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:33:35,837 [Worker-53: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-29 00:33:36,403 [Worker-53: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:33:36,973 [Worker-53: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/main/java
+2020-06-29 00:33:36,975 [Worker-53: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:33:36,975 [Worker-53: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:33:36,976 [Worker-53: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/test/java
+2020-06-29 00:33:37,222 [Worker-53: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-06-29 00:33:38,031 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:33:38,032 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:33:38,050 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:33:38,117 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:33:38,118 [Worker-53: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:33:46,698 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-06-29 00:34:06,997 [Worker-51: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:34:06,997 [Worker-51: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:36:25,391 [Worker-54: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:36:25,986 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:36:25,990 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:36:25,990 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:36:25,993 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:36:25,993 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:36:35,481 [Worker-54: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-29 00:36:36,032 [Worker-54: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:36:36,595 [Worker-54: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/main/java
+2020-06-29 00:36:36,595 [Worker-54: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:36:36,596 [Worker-54: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:36:36,596 [Worker-54: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/test/java
+2020-06-29 00:36:36,808 [Worker-54: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-06-29 00:36:37,673 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:36:37,674 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:36:37,691 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:36:37,758 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:36:37,758 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:37:23,548 [Worker-52: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:37:23,548 [Worker-52: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 00:44:16,373 [Worker-52: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:44:16,951 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:44:16,954 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:44:16,955 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:44:16,957 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:44:16,957 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:52:43,144 [Worker-59: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:52:43,751 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:52:43,755 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:52:43,755 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 00:52:43,757 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:52:43,757 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:53:00,638 [Worker-62: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-29 00:53:01,199 [Worker-62: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 00:53:01,788 [Worker-62: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/main/java
+2020-06-29 00:53:01,788 [Worker-62: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:53:01,789 [Worker-62: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 00:53:01,789 [Worker-62: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/test/java
+2020-06-29 00:53:02,001 [Worker-62: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-06-29 00:53:02,873 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:53:02,874 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 00:53:02,891 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 00:53:02,960 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 00:53:02,960 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 00:53:08,737 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 00:53:08,819 [Worker-59: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 00:53:08,819 [Worker-59: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 01:06:06,310 [Worker-66: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 01:06:06,830 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:06:06,834 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 01:06:06,834 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 01:06:06,836 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:06:06,836 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 01:06:15,952 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-29 01:06:16,500 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 01:06:17,138 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/main/java
+2020-06-29 01:06:17,139 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 01:06:17,139 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /myblog2/src/main/resources
+2020-06-29 01:06:17,140 [Worker-69: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /myblog2/src/test/java
+2020-06-29 01:06:17,441 [Worker-69: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2020-06-29 01:06:18,273 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:06:18,274 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 01:06:18,290 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 01:06:18,356 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:06:18,357 [Worker-70: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 01:06:23,229 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 01:06:23,312 [Worker-71: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 01:06:23,312 [Worker-71: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 01:10:10,555 [Worker-71: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boot:myblog2:0.0.1-SNAPSHOT @ C:\workspace\myBlog\myblog2\pom.xml.
+2020-06-29 01:10:11,070 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:10:11,073 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 01:10:11,074 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 01:10:11,075 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 01:10:11,076 [Worker-71: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 01:10:36,041 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 01:10:36,128 [Worker-75: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 01:10:36,128 [Worker-75: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 01:11:34,250 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 01:11:34,330 [Worker-73: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 01:11:34,331 [Worker-73: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 10:25:21,202 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-06-29 10:41:51,193 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 10:41:51,198 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 10:41:51,237 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 26 resources
+2020-06-29 10:41:51,247 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 10:41:51,247 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 10:42:00,592 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 10:42:00,759 [Worker-24: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 10:42:00,761 [Worker-24: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 10:44:30,755 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 10:44:30,757 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 10:44:30,759 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 10:44:30,761 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 10:44:30,762 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\myBlog\myblog2\src\test\resources
+2020-06-29 10:44:38,165 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2020-06-29 10:44:38,281 [Worker-28: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\workspace\myBlog\myblog2
+2020-06-29 10:44:38,282 [Worker-28: Launching myblog2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2020-06-29 11:13:37,062 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-29 11:13:37,063 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-29 11:13:37,065 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-29 11:13:37,067 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
