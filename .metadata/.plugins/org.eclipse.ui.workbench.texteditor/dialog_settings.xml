@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="plugin"/>
+		<item key="selection" value=""/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="starter-j"/>
 			<item value="plugin"/>
 			<item value="menu-reminder"/>
 			<item value="js"/>
@@ -13,7 +14,6 @@
 			<item value="decor"/>
 			<item value="align"/>
 			<item value="box-padding-"/>
-			<item value="100%"/>
 		</list>
 		<list key="replacehistory">
 		</list>
